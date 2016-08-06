@@ -16,7 +16,7 @@ def ashell(bot, update):
 def error(bot, update, error):
     logger.warn('Update "%s" caused error "%s"' % (update, error))
 
-TOKEN = '259365602:AAHMAVVwEy3QXEmidYDiH4-pnZ3FbQOIU2c' 
+TOKEN = '' 
 
 
 def main():
