@@ -18,7 +18,7 @@ def on_callback_query(msg):
 
     bot.answerCallbackQuery(query_id, text='Got it')
 
-TOKEN = '259365602:AAHMAVVwEy3QXEmidYDiH4-pnZ3FbQOIU2c' 
+TOKEN = '' 
 
 bot = telepot.Bot(TOKEN)
 bot.message_loop({'chat': on_chat_message,
