@@ -1,29 +1,40 @@
 import sys
 import time
-import telepot
-from telepot.namedtuple import InlineKeyboardMarkup, InlineKeyboardButton
 
-def on_chat_message(msg):
-    content_type, chat_type, chat_id = telepot.glance(msg)
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
-    keyboard = InlineKeyboardMarkup(inline_keyboard=[
-                   [InlineKeyboardButton(text='Press me', callback_data='press')],
-               ])
+def ping(bot, update):
+    bot.sendMessage(update.message.chat_id, text='pong!')
 
-    bot.sendMessage(chat_id, 'Use inline keyboard', reply_markup=keyboard)
 
-def on_callback_query(msg):
-    query_id, from_id, query_data = telepot.glance(msg, flavor='callback_query')
-    print('Callback Query:', query_id, from_id, query_data)
+TOKEN = 'add token here' 
 
-    bot.answerCallbackQuery(query_id, text='Got it')
 
-TOKEN = '' 
+def main():
+    # Create the EventHandler and pass it your bot's token.
+    updater = Updater(TOKEN)
 
-bot = telepot.Bot(TOKEN)
-bot.message_loop({'chat': on_chat_message,
-                  'callback_query': on_callback_query})
-print('Listening ...')
+    # Get the dispatcher to register handlers
+    dp = updater.dispatcher
 
-while 1:
-    time.sleep(10)
+    # on different commands - answer in Telegram
+    dp.add_handler(CommandHandler("ping", ping))
+    # dp.add_handler(CommandHandler("help", help))
+
+    # on noncommand i.e message - echo the message on Telegram
+    # dp.add_handler(MessageHandler([Filters.text], echo))
+
+    # log all errors
+    # dp.add_error_handler(error)
+
+    # Start the Bot
+    updater.start_polling()
+
+    # Run the bot until the you presses Ctrl-C or the process receives SIGINT,
+    # SIGTERM or SIGABRT. This should be used most of the time, since
+    # start_polling() is non-blocking and will stop the bot gracefully.
+    updater.idle()
+
+
+if __name__ == '__main__':
+    main()
