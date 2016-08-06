@@ -6,8 +6,13 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 def ping(bot, update):
     bot.sendMessage(update.message.chat_id, text='pong!')
 
+def echo(bot, update):
+    bot.sendMessage(update.message.chat_id, text=update.message.text)
 
-TOKEN = 'add token here' 
+def error(bot, update, error):
+    logger.warn('Update "%s" caused error "%s"' % (update, error))
+
+TOKEN = '259365602:AAHMAVVwEy3QXEmidYDiH4-pnZ3FbQOIU2c' 
 
 
 def main():
@@ -22,10 +27,10 @@ def main():
     # dp.add_handler(CommandHandler("help", help))
 
     # on noncommand i.e message - echo the message on Telegram
-    # dp.add_handler(MessageHandler([Filters.text], echo))
+    dp.add_handler(MessageHandler([Filters.text], echo))
 
     # log all errors
-    # dp.add_error_handler(error)
+    dp.add_error_handler(error)
 
     # Start the Bot
     updater.start_polling()
