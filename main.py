@@ -1,7 +1,8 @@
 import sys
 import time
+import re
 
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, RegexHandler
 
 def ping(bot, update):
     bot.sendMessage(update.message.chat_id, text='pong!')
@@ -10,7 +11,6 @@ def echo(bot, update):
     bot.sendMessage(update.message.chat_id, text=update.message.text)
 
 def ashell(bot, update):
-  # if Filters.text == 'ascella':
     bot.sendMessage(update.message.chat_id, text='(A)SHELL')
 
 def error(bot, update, error):
@@ -32,7 +32,8 @@ def main():
 
     # on noncommand i.e message - echo the message on Telegram
     # dp.add_handler(MessageHandler([Filters.text], echo))
-    dp.add_handler(MessageHandler([Filters.text], ashell))
+
+    dp.add_handler(RegexHandler('^(ascella|scella)$', ashell))
 
     # log all errors
     dp.add_error_handler(error)
