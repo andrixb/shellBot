@@ -19,13 +19,14 @@ def ashell(bot, update):
 
 def send_random_picture():
     index = random.randint(0,4)
-    urls = ['#','http://qraaunderarm.com/content/images/underarm-slider/underarm1day.png','http://www.healcure.org/wp-content/uploads/2015/05/Underarm-Pain-Causes-Left-Right-Breast-Sharp-Shooting-Pain-under-Armpit.jpg','http://www.lifegag.com/wp-content/uploads/2015/06/maxresdefault.jpg','http://s.hswstatic.com/gif/eliminate-underarm-odor-1.jpg']
+    print index
+    urls = ['http://www.healcure.org/wp-content/uploads/2015/06/Armpit-hair-image-Girl-with-armpit-hair.jpg','http://qraaunderarm.com/content/images/underarm-slider/underarm1day.png','http://www.healcure.org/wp-content/uploads/2015/05/Underarm-Pain-Causes-Left-Right-Breast-Sharp-Shooting-Pain-under-Armpit.jpg','http://previews.123rf.com/images/ihmb/ihmb0806/ihmb080600483/3191311-Woman-applying-deodorant-on-her-underarm--Stock-Photo-armpit.jpg','http://s.hswstatic.com/gif/eliminate-underarm-odor-1.jpg']
     return urls[index]
 
 def error(bot, update, error):
     logger.warn('Update "%s" caused error "%s"' % (update, error))
 
-TOKEN = '' 
+TOKEN = '259365602:AAHMAVVwEy3QXEmidYDiH4-pnZ3FbQOIU2c' 
 
 def main():
     # Create the EventHandler and pass it your bot's token.
@@ -40,7 +41,7 @@ def main():
 
     # on noncommand i.e message - echo the message on Telegram
     # dp.add_handler(MessageHandler([Filters.text], echo))
-    dp.add_handler(RegexHandler('^(ascella)$', ashell))
+    dp.add_handler(RegexHandler('^(ascella|Ascella)$', ashell))
 
     # log all errors
     dp.add_error_handler(error)
