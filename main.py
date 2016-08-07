@@ -1,6 +1,5 @@
 import sys
 import time
-import re
 
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, RegexHandler
 
@@ -11,13 +10,15 @@ def echo(bot, update):
     bot.sendMessage(update.message.chat_id, text=update.message.text)
 
 def ashell(bot, update):
-    bot.sendMessage(update.message.chat_id, text='(A)SHELL')
+    bot.sendPhoto(chat_id=update.message.chat_id, photo='https://telegram.org/img/t_logo.png')
+
+def callbackTest():
+    print "Im in"
 
 def error(bot, update, error):
     logger.warn('Update "%s" caused error "%s"' % (update, error))
 
 TOKEN = '' 
-
 
 def main():
     # Create the EventHandler and pass it your bot's token.
