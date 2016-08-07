@@ -3,7 +3,7 @@ import time
 import random
 import re
 
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, RegexHandler, Handler
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
 def callback_test():
     print "Im in"
