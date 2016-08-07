@@ -22,7 +22,7 @@ def findWord(bot, update):
     words_list = update.message.text.split()
     for x in words_list:
         if re.search(r'\b(ascella|Ascella|scella|scelle|Scella|Scelle|Ascelle|ascelle)\b', x):
-           return true
+           ashell(bot, update)
 
 def send_random_picture():
     index = random.randint(0,4)
@@ -49,7 +49,6 @@ def main():
     # on noncommand i.e message - echo the message on Telegram
     # dp.add_handler(MessageHandler([Filters.text], echo))
     dp.add_handler(MessageHandler([Filters.text], findWord))
-    # dp.add_handler(Handler(findWord))
     # dp.add_handler(RegexHandler('^(ascella|Ascella|scella|scelle|Scella|Scelle|Ascelle|ascelle)$', ashell))
 
     # log all errors
