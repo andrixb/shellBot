@@ -25,7 +25,7 @@ def send_random_picture():
 def error(bot, update, error):
     logger.warn('Update "%s" caused error "%s"' % (update, error))
 
-TOKEN = '' 
+TOKEN = '259365602:AAHMAVVwEy3QXEmidYDiH4-pnZ3FbQOIU2c' 
 
 def main():
     # Create the EventHandler and pass it your bot's token.
@@ -40,8 +40,7 @@ def main():
 
     # on noncommand i.e message - echo the message on Telegram
     # dp.add_handler(MessageHandler([Filters.text], echo))
-
-    dp.add_handler(RegexHandler('^(ascella|scella)$', ashell))
+    dp.add_handler(RegexHandler('^(ascella)$', ashell))
 
     # log all errors
     dp.add_error_handler(error)
