@@ -1,8 +1,9 @@
 import sys
 import time
 import random
+import re
 
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, RegexHandler
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, RegexHandler, Handler
 
 def callback_test():
     print "Im in"
@@ -16,6 +17,12 @@ def echo(bot, update):
 def ashell(bot, update):
     url = send_random_picture()
     bot.sendPhoto(chat_id=update.message.chat_id, photo=url)
+
+def findWord(bot, update):
+    words_list = update.message.text.split()
+    for x in words_list:
+        if re.search(r'\b(ascella|Ascella|scella|scelle|Scella|Scelle|Ascelle|ascelle)\b', x):
+           return true
 
 def send_random_picture():
     index = random.randint(0,4)
@@ -41,7 +48,9 @@ def main():
 
     # on noncommand i.e message - echo the message on Telegram
     # dp.add_handler(MessageHandler([Filters.text], echo))
-    dp.add_handler(RegexHandler('^(ascella|Ascella)$', ashell))
+    dp.add_handler(MessageHandler([Filters.text], findWord))
+    # dp.add_handler(Handler(findWord))
+    # dp.add_handler(RegexHandler('^(ascella|Ascella|scella|scelle|Scella|Scelle|Ascelle|ascelle)$', ashell))
 
     # log all errors
     dp.add_error_handler(error)
