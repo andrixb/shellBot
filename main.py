@@ -1,7 +1,11 @@
 import sys
 import time
+import random
 
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, RegexHandler
+
+def callback_test():
+    print "Im in"
 
 def ping(bot, update):
     bot.sendMessage(update.message.chat_id, text='pong!')
@@ -10,10 +14,13 @@ def echo(bot, update):
     bot.sendMessage(update.message.chat_id, text=update.message.text)
 
 def ashell(bot, update):
-    bot.sendPhoto(chat_id=update.message.chat_id, photo='https://telegram.org/img/t_logo.png')
+    url = send_random_picture()
+    bot.sendPhoto(chat_id=update.message.chat_id, photo=url)
 
-def callbackTest():
-    print "Im in"
+def send_random_picture():
+    index = random.randint(0,4)
+    urls = ['#','http://qraaunderarm.com/content/images/underarm-slider/underarm1day.png','http://www.healcure.org/wp-content/uploads/2015/05/Underarm-Pain-Causes-Left-Right-Breast-Sharp-Shooting-Pain-under-Armpit.jpg','http://www.lifegag.com/wp-content/uploads/2015/06/maxresdefault.jpg','http://s.hswstatic.com/gif/eliminate-underarm-odor-1.jpg']
+    return urls[index]
 
 def error(bot, update, error):
     logger.warn('Update "%s" caused error "%s"' % (update, error))
