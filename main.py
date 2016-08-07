@@ -21,7 +21,7 @@ def ashell(bot, update):
 def findWord(bot, update):
     words_list = update.message.text.split()
     for x in words_list:
-        if re.search(r'\b(ascella|Ascella|scella|scelle|Scella|Scelle|Ascelle|ascelle)\b', x):
+        if re.search(r'\b(ascella|Ascella|scella|scelle|Scella|Scelle|Ascelle|ascelle|scell|Scell|ascell|Ascell)\b', x):
            ashell(bot, update)
 
 def send_random_picture():
