@@ -5,6 +5,7 @@ import re
 
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
+### UTILITY METHODS ### 
 def callback_test():
     print "Im in"
 
@@ -14,15 +15,20 @@ def ping(bot, update):
 def echo(bot, update):
     bot.sendMessage(update.message.chat_id, text=update.message.text)
 
+### SEND RANDOM PHOTO ###
 def ashell(bot, update):
     url = send_random_picture()
     bot.sendPhoto(chat_id=update.message.chat_id, photo=url)
 
+### FIND WORD IN A SENTENCE ###
 def findWord(bot, update):
+    # split the sentence from update in words
     words_list = update.message.text.split()
+    # lunch comparision words in list and words split array
     for x in words_list:
+        # if matching call send randon photo
         if re.search(r'\b(ascella|Ascella|scella|scelle|Scella|Scelle|Ascelle|ascelle|scell|Scell|ascell|Ascell)\b', x):
-           ashell(bot, update)
+           ashell(bot, update) #call 
 
 def send_random_picture():
     index = random.randint(0,4)

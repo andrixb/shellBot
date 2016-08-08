@@ -1,0 +1,382 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"words",
+				"words_to_match"
+			],
+			[
+				"ide",
+				"index"
+			],
+			[
+				"sen",
+				"send_random_picture"
+			],
+			[
+				"list-",
+				"list-style-type"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"in",
+				"inline"
+			],
+			[
+				"comm",
+				"comm-section	Comment - Full section comment"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 307.0,
+		"last_filter": "package in",
+		"selected_items":
+		[
+			[
+				"package in",
+				"Package Control: Install Package"
+			],
+			[
+				"html",
+				"Snippet: html"
+			],
+			[
+				"mark",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"ma",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"comm",
+				"Snippet: Comment - Full section comment"
+			],
+			[
+				"mar",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"git",
+				"Git: Pull"
+			],
+			[
+				"git chan",
+				"Git: Change Branch"
+			],
+			[
+				"git add",
+				"Git: Add..."
+			],
+			[
+				"git branch",
+				"Git: Change Branch"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"comme",
+				"Snippet: Comment - Subsection comment"
+			],
+			[
+				"java",
+				"Javascript Beautify"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"Package Control.sublime-package",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/Andrix/Projects/shellBot/main.py",
+		"/Users/Andrix/Projects/shellBot/README.md",
+		"/Users/Andrix/Projects/storybot/story.js",
+		"/Users/Andrix/Desktop/test imgs/index.html",
+		"/Users/Andrix/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
+		"/Users/Andrix/Desktop/pic_experiment/script.js",
+		"/Users/Andrix/Projects/TWITTER_APP/http-server/public/app/js/directives/noParams_template.html",
+		"/Users/Andrix/Projects/TWITTER_APP/http-server/public/app/js/directives/noParams.js",
+		"/Users/Andrix/Projects/TWITTER_APP/http-server/lib/http-server.js",
+		"/Users/Andrix/Projects/TWITTER_APP/http-server/bin/http-server",
+		"/Users/Andrix/Projects/TWITTER_APP/js/app.js",
+		"/Users/Andrix/Projects/TWITTER_APP/js/controllers/MainController.js",
+		"/Users/Andrix/Projects/TWITTER_APP/index.html",
+		"/Users/Andrix/Desktop/TWITTER_APP/index.html",
+		"/Users/Andrix/Google Drive/IDEA",
+		"/Users/Andrix/Projects/autoEditBackBoneFrontEnd/javascripts/head.js",
+		"/Users/Andrix/Projects/autoEditBackBoneFrontEnd/stylesheet/scss/partials/_container.scss",
+		"/Users/Andrix/Projects/autoEditBackBoneFrontEnd/stylesheet/main.scss",
+		"/Users/Andrix/Projects/autoEditBackBoneFrontEnd/javascripts/body.js",
+		"/Users/Andrix/Projects/autoEditBackBoneFrontEnd/notes/setup_notes.md",
+		"/Users/Andrix/Projects/autoEditBackBoneFrontEnd/stylesheet/scss/partials/_header.scss",
+		"/Users/Andrix/Projects/autoEditBackBoneFrontEnd/stylesheet/scss/libs/_utils2.scss",
+		"/Users/Andrix/Projects/autoEditBackBoneFrontEnd/stylesheet/scss/libs/_utils.scss",
+		"/Users/Andrix/Projects/autoEditBackBoneFrontEnd/bundle.js",
+		"/Users/Andrix/Projects/autoEditBackBoneFrontEnd/notes/local_storage.md",
+		"/Users/Andrix/Projects/autoEditBackBoneFrontEnd/api/index.js",
+		"/Users/Andrix/Projects/autoEditBackBoneFrontEnd/stylesheet/main.css",
+		"/Users/Andrix/Projects/autoEditBackBoneFrontEnd/index.html",
+		"/Users/Andrix/Documents/Vuze Downloads/Adobe CC 2015/readme.txt",
+		"/Users/Andrix/Desktop/Backbone_boilerplate/index.html",
+		"/Users/Andrix/Desktop/test/index.html",
+		"/Users/Andrix/Desktop/autoEditSailsApi/config/models.js",
+		"/Users/Andrix/Desktop/autoEditSailsApi/api/controllers/AuthController.js",
+		"/Users/Andrix/Desktop/autoEditSailsApi/notes/2016_03_13_NOTES/TODO_13March2016.md",
+		"/Users/Andrix/Desktop/autoEditSailsApi/api/controllers/UserController.js",
+		"/Users/Andrix/Desktop/autoEditSailsApi/node_modules/waterlock-local-auth/lib/controllers/actions/login.js",
+		"/Users/Andrix/Desktop/autoEditSailsApi/node_modules/sails/lib/hooks/blueprints/actions/create.js",
+		"/Users/Andrix/Desktop/autoEditSailsApi/test/integration/controllers/AuthController.test.js",
+		"/Users/Andrix/Desktop/autoEditSailsApi/notes/2016_03_13_NOTES/cleaned up code_13_March_2016.md",
+		"/Users/Andrix/Desktop/autoEditSailsApi/node_modules/sails/lib/hooks/blueprints/actions/update.js",
+		"/Users/Andrix/Desktop/autoEditSailsApi/test/fixtures/users.js",
+		"/Users/Andrix/Desktop/autoEditSailsApi/node_modules/sails/lib/hooks/blueprints/actions/populate.js",
+		"/Users/Andrix/Desktop/autoEditSailsApi/node_modules/sails/lib/hooks/blueprints/actions/findOne.js",
+		"/Users/Andrix/Desktop/autoEditSailsApi/config/routes.js",
+		"/Users/Andrix/Desktop/autoEditSailsApi/node_modules/sails/lib/hooks/blueprints/actions/destroy.js",
+		"/Users/Andrix/Desktop/autoEditSailsApi/node_modules/sails/lib/hooks/blueprints/actions/add.js",
+		"/Users/Andrix/Desktop/autoEditSailsApi/notes/AUTHENTICATION/authentication_final.md",
+		"/Users/Andrix/Desktop/autoEditSailsApi/config/policies.js",
+		"/Users/Andrix/Desktop/autoEditSailsApi/notes/TODO_13March2016.md",
+		"/Users/Andrix/Desktop/autoEditSailsApi/notes/cleaned up code_13_March_2016.md",
+		"/Users/Andrix/Desktop/autoEditSailsApi/notes/cleaned up code.md",
+		"/Users/Andrix/Desktop/autoEditSailsApi/notes/request_session_object.md",
+		"/Users/Andrix/Desktop/autoEditSailsApi/config/swagger.js",
+		"/Users/Andrix/Desktop/autoEditSailsApi/api/controllers/SwaggerController.js",
+		"/Users/Andrix/Desktop/autoEditSailsApi/config/installedHooks.js",
+		"/Users/Andrix/Desktop/autoEditSailsApi/assets/docs/index.html",
+		"/Users/Andrix/Desktop/autoEditSailsApi/notes/swagger.md",
+		"/Users/Andrix/Desktop/autoEditSailsApi/notes/Mockups/autoEdit_v1.pdf",
+		"/Users/Andrix/Desktop/autoEditSailsApi/config/waterlock.js",
+		"/Users/Andrix/Desktop/autoEditSailsApi/api/controllers/ProjectController.js",
+		"/Users/Andrix/Desktop/autoEditSailsApi/api/controllers/AnnotationController.js",
+		"/Users/Andrix/Desktop/autoEditSailsApi/config/blueprints.js",
+		"/Users/Andrix/Desktop/autoEditSailsApi/api/controllers/TranscriptController.js",
+		"/Users/Andrix/Desktop/autoEditSailsApi/api/controllers/MediaController.js",
+		"/Users/Andrix/Desktop/autoEditSailsApi/api/controllers/PapercutController.js",
+		"/Users/Andrix/Desktop/autoEditSailsApi/api/controllers/PapereditController.js",
+		"/Users/Andrix/Desktop/autoEditSailsApi/api/models/Annotation.js",
+		"/Users/Andrix/Desktop/autoEditSailsApi/api/models/Attempt.js",
+		"/Users/Andrix/Desktop/autoEditSailsApi/api/models/Auth.js",
+		"/Users/Andrix/Desktop/autoEditSailsApi/api/models/Jwt.js",
+		"/Users/Andrix/Desktop/autoEditSailsApi/api/models/Media.js",
+		"/Users/Andrix/Desktop/autoEditSailsApi/api/models/User.js",
+		"/Users/Andrix/Desktop/autoEditSailsApi/api/models/Use.js",
+		"/Users/Andrix/Desktop/autoEditSailsApi/api/models/Papercut.js",
+		"/Users/Andrix/Desktop/autoEditSailsApi/api/models/Transcript.js",
+		"/Users/Andrix/Desktop/autoEditSailsApi/api/models/Paperedit.js",
+		"/Users/Andrix/Desktop/autoEditSailsApi/api/models/Speaker.js",
+		"/Users/Andrix/Desktop/autoEditSailsApi/api/models/Project.js",
+		"/Users/Andrix/Desktop/autoEditSailsApi/api/models/ResetToken.js",
+		"/Users/Andrix/Desktop/autoEditSailsApi/README.md",
+		"/Users/Andrix/Desktop/autoEditSailsApi/api/policies/isAdmin.js",
+		"/Users/Andrix/Desktop/autoEditSailsApi/package.json",
+		"/Users/Andrix/Desktop/autoEditSailsApi/api/models/User2.js",
+		"/Users/Andrix/Desktop/sails_js_waterlock_js_auth_api/config/blueprints.js",
+		"/Users/Andrix/Desktop/sails_js_waterlock_js_auth_api/config/routes.js",
+		"/Users/Andrix/Desktop/AutoEdit Project/myApi/api/services/CipherService.js",
+		"/Users/Andrix/Desktop/AutoEdit Project/autoEditSailsApi/views/auth/register.ejs",
+		"/Users/Andrix/Desktop/AutoEdit Project/autoEditSailsApi/notes/authentication_method.md",
+		"/Users/Andrix/Desktop/AutoEdit Project/autoEditSailsApi/api/policies/sessionAuth.js",
+		"/Users/Andrix/Desktop/AutoEdit Project/autoEditSailsApi/api/policies/hasJsonWebToken.js",
+		"/Users/Andrix/Desktop/AutoEdit Project/autoEditSailsApi/api/policies/bearerAuth.js",
+		"/Users/Andrix/Desktop/AutoEdit Project/autoEditSailsApi/api/controllers/ProjectController.js",
+		"/Users/Andrix/Desktop/AutoEdit Project/autoEditSailsApi/api/controllers/UserController.js",
+		"/Users/Andrix/Desktop/AutoEdit Project/autoEditSailsApi/api/controllers/TranscriptController.js",
+		"/Users/Andrix/Desktop/AutoEdit Project/autoEditSailsApi/api/controllers/MediaController.js",
+		"/Users/Andrix/Desktop/AutoEdit Project/autoEditSailsApi/app.js",
+		"/Users/Andrix/Desktop/AutoEdit Project/autoEditSailsApi/config/policies.js",
+		"/Users/Andrix/Desktop/AutoEdit Project/autoEditSailsApi/config/passport.js",
+		"/Users/Andrix/Desktop/AutoEdit Project/autoEditSailsApi/config/routes.js",
+		"/Users/Andrix/Desktop/AutoEdit Project/sails_auth_passport_js/config/session.js",
+		"/Users/Andrix/Desktop/AutoEdit Project/sails_auth_passport_js/config/routes.js",
+		"/Users/Andrix/Desktop/AutoEdit Project/autoEditSailsApi/config/models.js",
+		"/Users/Andrix/Desktop/AutoEdit Project/autoEditSailsApi/config/connections.js",
+		"/Users/Andrix/Desktop/AutoEdit Project/autoEditSailsApi/config/bootstrap.js",
+		"/Users/Andrix/Desktop/AutoEdit Project/autoEditSailsApi/api/responses/serverError.js",
+		"/Users/Andrix/Desktop/AutoEdit Project/autoEditSailsApi/api/responses/ok.js",
+		"/Users/Andrix/Desktop/AutoEdit Project/autoEditSailsApi/api/responses/notFound.js",
+		"/Users/Andrix/Desktop/AutoEdit Project/autoEditSailsApi/api/responses/forbidden.js",
+		"/Users/Andrix/Desktop/AutoEdit Project/autoEditSailsApi/api/responses/created.js",
+		"/Users/Andrix/Desktop/AutoEdit Project/autoEditSailsApi/api/policies/passport.js",
+		"/Users/Andrix/Desktop/AutoEdit Project/sails_auth_passport_js/api/policies/passport.js",
+		"/Users/Andrix/Desktop/AutoEdit Project/autoEditSailsApi/api/models/User.js",
+		"/Users/Andrix/Desktop/AutoEdit Project/sails_auth_passport_js/api/models/User.js",
+		"/Users/Andrix/Desktop/AutoEdit Project/autoEditSailsApi/api/models/Passport.js",
+		"/Users/Andrix/Desktop/AutoEdit Project/autoEditSailsApi/api/controllers/AuthController.js"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"User",
+			"Model",
+			"req.params",
+			"5"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"Model"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 100.0
+	},
+	"pinned_build_system": "",
+	"project": "main.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 157.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
