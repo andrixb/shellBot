@@ -2,8 +2,10 @@ import sys
 import time
 import random
 import re
+import subprocess
 
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+from gtts import gTTS
 
 ### UTILITY METHODS ### 
 def callback_test():
@@ -15,9 +17,12 @@ def ping(bot, update):
 def echo(bot, update):
     bot.sendMessage(update.message.chat_id, text=update.message.text)
 
+def testSubprocess():
+    subprocess.call(['ls', '-1'])
+
 ### SEND RANDOM PHOTO ###
-def ashell(bot, update):
-    url = send_random_picture()
+def sendImage(bot, update):
+    url = sendRandomPicture()
     bot.sendPhoto(chat_id=update.message.chat_id, photo=url)
 
 ### FIND WORD IN A SENTENCE ###
@@ -28,13 +33,39 @@ def findWord(bot, update):
     for x in words_list:
         # if matching call send randon photo
         if re.search(r'\b(ascella|Ascella|scella|scelle|Scella|Scelle|Ascelle|ascelle|scell|Scell|ascell|Ascell)\b', x):
-           ashell(bot, update) #call 
+           index=random.randint(0,4)
+           if (index % 2) == 0:
+               sendImage(bot, update)
+           else:
+               sendSample(bot, update) #call 
 
-def send_random_picture():
+def sendRandomPicture():
     index = random.randint(0,4)
     print index
     urls = ['http://www.healcure.org/wp-content/uploads/2015/06/Armpit-hair-image-Girl-with-armpit-hair.jpg','http://qraaunderarm.com/content/images/underarm-slider/underarm1day.png','http://www.healcure.org/wp-content/uploads/2015/05/Underarm-Pain-Causes-Left-Right-Breast-Sharp-Shooting-Pain-under-Armpit.jpg','http://previews.123rf.com/images/ihmb/ihmb0806/ihmb080600483/3191311-Woman-applying-deodorant-on-her-underarm--Stock-Photo-armpit.jpg','http://s.hswstatic.com/gif/eliminate-underarm-odor-1.jpg']
     return urls[index]
+
+### GENERATE AUDIO FILE ###
+def createAudio(sentence):
+    tts = gTTS(text=sentence, lang='it')
+    tts.save('audio_sample2.mp3')
+    subprocess.call(['./bin/ffmpeg', '-y', '-i', 'audio_sample2.mp3', 'tmp/audio_sample2.ogg'])
+    return True
+
+def sendAudio(bot, update):
+    bot.sendVoice(chat_id=update.message.chat_id, voice=open('tmp/audio_sample2.ogg'))
+
+def sendSample(bot, update):
+    text_to_send = ["I'ch'scell' o frat'", "uua tien'e cozze sotto e' scielle"]
+    index = random.randint(0,2)
+    if createAudio(text_to_send[index]) == True:
+        sendAudio(bot, update)
+    
+# def sendAction(bot, update):
+#     bot.sendChatAction(chat_id=update.message.chat_id, action=telegram.ChatAction.TYPING)
+
+# def sendMessage(bot, update):
+#     bot.sendMessage(chat_id=update.message.chat_id, text="I'm sorry Dave I'm afraid I can't do that.")
 
 def error(bot, update, error):
     logger.warn('Update "%s" caused error "%s"' % (update, error))
