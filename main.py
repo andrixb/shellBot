@@ -1,10 +1,3 @@
-import sys
-import time
-import random
-import re
-import subprocess
-
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 from gtts import gTTS
 
 ### UTILITY METHODS ### 
@@ -70,7 +63,7 @@ def sendSample(bot, update):
 def error(bot, update, error):
     logger.warn('Update "%s" caused error "%s"' % (update, error))
 
-TOKEN = '' 
+TOKEN = '259365602:AAHMAVVwEy3QXEmidYDiH4-pnZ3FbQOIU2c' 
 
 def main():
     # Create the EventHandler and pass it your bot's token.
