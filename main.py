@@ -32,7 +32,7 @@ def findWord(bot, update):
     # lunch comparision words in list and words split array
     for x in words_list:
         # if matching call send randon photo
-        if re.search(r'\b(ascella|Ascella|scella|scelle|Scella|Scelle|Ascelle|ascelle|scell|Scell|ascell|Ascell)\b', x):
+        if re.search(r'\b(shelly|Shelly|ascella|Ascella|scella|scelle|Scella|Scelle|Ascelle|ascelle|scell|Scell|ascell|Ascell)\b', x):
            index=random.randint(0,4)
            if (index % 2) == 0:
                sendImage(bot, update)
@@ -56,7 +56,7 @@ def sendAudio(bot, update):
     #edit for raspberryPI
     index = random.randint(0,2)
     audio_sample = ['tmp/audio_sample.ogg', 'tmp/audio_sample2.ogg']
-    bot.sendVoice(chat_id=update.message.chat_id, voice=open(audio_sample[index]))
+    bot.sendVoice(chat_id=update.message.chat_id, voice=open(audio_sample[0]))
 
 def sendSample(bot, update):
     text_to_send = ["I'ch'scell' o frat'", "uua tien'e cozze sotto e' scielle"]
