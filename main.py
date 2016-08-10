@@ -37,7 +37,7 @@ def findWord(bot, update):
            if (index % 2) == 0:
                sendImage(bot, update)
            else:
-               sendSample(bot, update) #call 
+               sendAudio(bot, update) #call 
 
 def sendRandomPicture():
     index = random.randint(0,4)
@@ -48,12 +48,15 @@ def sendRandomPicture():
 ### GENERATE AUDIO FILE ###
 def createAudio(sentence):
     tts = gTTS(text=sentence, lang='it')
-    tts.save('audio_sample2.mp3')
-    subprocess.call(['./bin/ffmpeg', '-y', '-i', 'audio_sample2.mp3', 'tmp/audio_sample2.ogg'])
+    tts.save('audio_sample.mp3')
+    subprocess.call(['./bin/ffmpeg', '-y', '-i', 'tmp/audio_sample.mp3', 'tmp/audio_sample.ogg'])
     return True
 
 def sendAudio(bot, update):
-    bot.sendVoice(chat_id=update.message.chat_id, voice=open('tmp/audio_sample2.ogg'))
+    #edit for raspberryPI
+    index = random.randint(0,2)
+    audio_sample = ['tmp/audio_sample.ogg', 'tmp/audio_sample2.ogg']
+    bot.sendVoice(chat_id=update.message.chat_id, voice=open(audio_sample[index]))
 
 def sendSample(bot, update):
     text_to_send = ["I'ch'scell' o frat'", "uua tien'e cozze sotto e' scielle"]
@@ -70,7 +73,7 @@ def sendSample(bot, update):
 def error(bot, update, error):
     logger.warn('Update "%s" caused error "%s"' % (update, error))
 
-TOKEN = '' 
+TOKEN = '259365602:AAHMAVVwEy3QXEmidYDiH4-pnZ3FbQOIU2c' 
 
 def main():
     # Create the EventHandler and pass it your bot's token.
@@ -86,6 +89,7 @@ def main():
     # on noncommand i.e message - echo the message on Telegram
     # dp.add_handler(MessageHandler([Filters.text], echo))
     dp.add_handler(MessageHandler([Filters.text], findWord))
+    
     # dp.add_handler(RegexHandler('^(ascella|Ascella|scella|scelle|Scella|Scelle|Ascelle|ascelle)$', ashell))
 
     # log all errors
